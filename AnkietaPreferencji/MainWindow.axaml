@@ -5,5 +5,120 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AnkietaPreferencji.MainWindow"
         Title="AnkietaPreferencji">
-    Welcome to Avalonia!
+    
+    <StackPanel Width="700">
+        <TextBlock 
+            Text="Wpisz swoje imię:" 
+            HorizontalAlignment="Center" 
+            Padding="10" />
+        
+        <TextBox 
+            Width="200" 
+            Height="20" 
+            x:Name="TextBox_InputName"/>
+        
+        <TextBlock 
+            Text="Wybierz kategorię:" 
+            HorizontalAlignment="Center" 
+            Padding="10" />
+        
+        <ComboBox
+            HorizontalAlignment="Center"
+            x:Name="ComboBox_Intrest">
+            
+            <ComboBoxItem Content="rolnictwo"/>
+            <ComboBoxItem Content="przetwórstwo"/>
+            <ComboBoxItem Content="biedota za komuny"/>
+            
+        </ComboBox>
+        
+        <Button 
+            Content="Zatwierdź Dane" 
+            Margin="10" 
+            HorizontalAlignment="Center"
+            x:Name="Button_SubmitName"
+            />
+        
+        <Grid HorizontalAlignment="Center">
+            
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition Width="400" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Czy jesteś za zniesieniem Senatu?"
+                Padding="0,10"
+                />
+            
+            <CheckBox
+                Grid.Row="0"
+                Grid.Column="1"
+                Content="TAK"
+                x:Name="CheckBox_Question1"
+                />
+            
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                TextWrapping="Wrap"
+                Padding="0,10,10,10"
+                Text="Czy chcesz utrwalenia w przyszłej Konstytucji ustroju gospodarczego, zaprowadzonego przez reformę rolną i unarodowienie podstawowych gałęzi gospodarki krajowej, z zachowaniem ustawowych uprawnień inicjatywy prywatnej?"
+                />
+            
+            <CheckBox
+                Grid.Row="1"
+                Grid.Column="1"
+                Content="TAK"
+                x:Name="CheckBox_Question2"
+                />
+            
+            <TextBlock
+                Grid.Row="2"
+                Grid.Column="0"
+                TextWrapping="Wrap"
+                Padding="0,10"
+                Text="Czy chcesz utrwalenia zachodnich granic Państwa Polskiego na Bałtyku, Odrze i Nysie Łużyckiej?"
+                />
+            
+            <CheckBox
+                Grid.Row="2"
+                Grid.Column="1"
+                Content="TAK"
+                x:Name="CheckBox_Question3"
+                />
+            
+        </Grid>
+        
+        <Button
+            HorizontalAlignment="Center"
+            Margin="10"
+            Content="Prześlij"
+            x:Name="Button_Submit"/>
+        
+        <StackPanel>
+            <TextBlock
+                x:Name="TextBlock_Summary"
+                HorizontalAlignment="Center"/>
+        </StackPanel>
+        
+    </StackPanel>
+    
+    
 </Window>
+
+
