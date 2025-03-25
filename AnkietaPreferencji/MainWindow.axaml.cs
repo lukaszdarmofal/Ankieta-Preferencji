@@ -7,6 +7,7 @@ namespace AnkietaPreferencji;
 
 public partial class MainWindow : Window
 {
+    // dodaje tą linie kodu żeby była zmiana na commita :b
     public MainWindow()
     {
         InitializeComponent();
